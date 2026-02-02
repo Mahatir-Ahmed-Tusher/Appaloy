@@ -5,7 +5,7 @@ import CategoryChips from "@/components/CategoryChips";
 import AppSection from "@/components/AppSection";
 import MenuDrawer from "@/components/MenuDrawer";
 import SearchDialog from "@/components/SearchDialog";
-import { featuredApps, trendingApps, newApps, editorsChoice, musicApps, educationApps, gamesApps, customFeaturedApps, getAppsByCategory, getAllApps } from "@/data/mockApps";
+import { featuredApps, trendingApps, newApps, editorsChoice, musicApps, educationApps, gamesApps, entertainmentApps, customFeaturedApps, getAppsByCategory, getAllApps } from "@/data/mockApps";
 import { useState, useMemo } from "react";
 
 const Index = () => {

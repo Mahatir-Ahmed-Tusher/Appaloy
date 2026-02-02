@@ -25,75 +25,81 @@ const Index = () => {
       <TopAppBar onMenuClick={() => setMenuOpen(true)} onSearchClick={() => setSearchOpen(true)} />
       <MenuDrawer open={menuOpen} onOpenChange={setMenuOpen} />
       <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />
-      
+
       <main className="safe-bottom">
         <HeroSection />
-        
+
         <div id="categories-section">
-          <CategoryChips 
-            selectedCategory={selectedCategory} 
-            onCategoryChange={setSelectedCategory} 
+          <CategoryChips
+            selectedCategory={selectedCategory}
+            onCategoryChange={setSelectedCategory}
           />
         </div>
-        
+
         {filteredApps ? (
           // Show filtered results
-          <AppSection 
+          <AppSection
             title={`${selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} Apps`}
             apps={filteredApps}
           />
         ) : (
           // Show default sections
           <>
-            <AppSection 
-              title="Featured Apps" 
-              apps={customFeaturedApps} 
-              variant="featured" 
+            <AppSection
+              title="Featured Apps"
+              apps={customFeaturedApps}
+              variant="featured"
               icon="sparkles"
             />
-            
-            <AppSection 
-              title="Games" 
+
+            <AppSection
+              title="Entertainment"
+              apps={entertainmentApps}
+              icon="zap"
+            />
+
+            <AppSection
+              title="Games"
               apps={gamesApps}
               icon="gamepad-2"
             />
-            
-            <AppSection 
-              title="Music Apps" 
+
+            <AppSection
+              title="Music Apps"
               apps={musicApps}
               icon="music"
             />
-            
-            <AppSection 
-              title="Education" 
+
+            <AppSection
+              title="Education"
               apps={educationApps}
               icon="graduation-cap"
             />
-            
-            <AppSection 
-              title="Trending in Bangladesh" 
+
+            <AppSection
+              title="Trending in Bangladesh"
               apps={trendingApps}
               icon="trending-up"
             />
-            
-            <AppSection 
-              title="New & Updated" 
+
+            <AppSection
+              title="New & Updated"
               apps={newApps}
               icon="zap"
             />
-            
-            <AppSection 
-              title="Editor's Picks" 
+
+            <AppSection
+              title="Editor's Picks"
               apps={editorsChoice}
               icon="award"
             />
           </>
         )}
-        
+
         {/* Extra padding for bottom nav */}
         <div className="h-8" />
       </main>
-      
+
       <BottomNav />
     </div>
   );

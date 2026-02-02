@@ -493,6 +493,88 @@ export const wordViaApp: AppData = {
   ]
 };
 
+export const boiwatchApp: AppData = {
+  id: 104,
+  name: "BoiWatch",
+  developer: "Mahathir Ahmed Tusher",
+  icon: "https://i.postimg.cc/wTJtCD6M/cimana-icon.png",
+  rating: 4.3,
+  downloads: "10K+",
+  verified: true,
+  category: "entertainment",
+  shortDescription: "Modern entertainment discovery with AI assistance",
+  description: `**BoiWatch** is a modern Android app built for movie and TV show lovers who enjoy smart discovery and smooth watching. Explore trending, popular, and top rated content powered by TMDB with rich details like cast, trailers, and recommendations. Meet Cinemawala, an AI assistant that suggests what to watch, shares trivia, and gives honest opinions. A dedicated season picker makes browsing series simple and beautiful. With continue watching, an integrated video player, and a responsive UI for phones and tablets, BoiWatch delivers a fast, elegant, and enjoyable entertainment experience.`,
+  version: "1.0.0",
+  size: "22 MB",
+  downloadUrl: "https://github.com/Mahatir-Ahmed-Tusher/Boiwatch/releases/download/v1.0.0/BoiWatch.apk",
+  features: [
+    "🤖 AI Assistant 'Cinemawala'",
+    "📅 Season picker for series",
+    "🎬 TMDB integration for rich metadata",
+    "📱 Responsive UI for all devices",
+    "🎥 Integrated video player",
+    "🔄 Continue watching feature"
+  ],
+  reviews: [
+    {
+      id: 1,
+      userName: "Jamiul Fattah Punno",
+      rating: 5,
+      comment: "UI ta onek smooth. Cinemawala feature ta amar favorite. Movie suggest kore bhalo bhalo.",
+      date: "2025-01-28"
+    },
+    {
+      id: 2,
+      userName: "Mashrufa Hasnin Nourin",
+      rating: 5,
+      comment: "Series season picker ta khub useful. Design ta clean and modern.",
+      date: "2025-01-29"
+    },
+    {
+      id: 3,
+      userName: "Tanvir Ahmed",
+      rating: 5,
+      comment: "Continue watching feature ta perfectly kaj kore. Amar daily use app hoye geche.",
+      date: "2025-01-30"
+    },
+    {
+      id: 4,
+      userName: "Nabila Islam",
+      rating: 5,
+      comment: "Details section ta onek rich. Cast, trailer sob ek jaygay pawa jay.",
+      date: "2025-01-31"
+    },
+    {
+      id: 5,
+      userName: "Fahim Rahman",
+      rating: 4,
+      comment: "AI assistant ta fun to use. Future update e aro feature chai.",
+      date: "2025-02-01"
+    },
+    {
+      id: 6,
+      userName: "Rifat Hossain",
+      rating: 3,
+      comment: "App ta bhalo but kono kono time video load e late hoy.",
+      date: "2025-02-01"
+    },
+    {
+      id: 7,
+      userName: "Ayesha Akter",
+      rating: 2,
+      comment: "Low network e experience ta aro improve kora dorkar.",
+      date: "2025-02-02"
+    },
+    {
+      id: 8,
+      userName: "Mehedi Hasan",
+      rating: 3,
+      comment: "Overall bhalo app, kintu initial loading time ektu beshi.",
+      date: "2025-02-02"
+    }
+  ]
+};
+
 // Get all apps combined
 export const getAllApps = (): AppData[] => {
   return [
@@ -504,6 +586,7 @@ export const getAllApps = (): AppData[] => {
     khojApp,
     genZDictionaryApp,
     wordViaApp,
+    boiwatchApp,
   ];
 };
 
@@ -519,25 +602,31 @@ export const getAppsByCategory = (category: string): AppData[] => {
 
 // Music category apps
 export const musicApps: AppData[] = [
-  trendingApps.find(app => app.name === "TuneStream")!,
+  ...trendingApps.filter(app => app.category === "music"),
   gaanlyApp,
+];
+
+// Entertainment category apps
+export const entertainmentApps: AppData[] = [
+  boiwatchApp,
 ];
 
 // Education category apps
 export const educationApps: AppData[] = [
-  trendingApps.find(app => app.name === "LearnCode")!,
+  ...trendingApps.filter(app => app.category === "education"),
   khojApp,
   genZDictionaryApp,
 ];
 
 // Games category apps
 export const gamesApps: AppData[] = [
-  trendingApps.find(app => app.name === "GameQuest")!,
+  ...trendingApps.filter(app => app.category === "games"),
   wordViaApp,
 ];
 
 // Featured apps including custom apps
 export const customFeaturedApps: AppData[] = [
+  boiwatchApp,
   gaanlyApp,
   khojApp,
   wordViaApp,

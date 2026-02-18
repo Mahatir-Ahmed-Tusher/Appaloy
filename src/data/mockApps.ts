@@ -482,6 +482,74 @@ export const dabarenaApp: AppData = {
   ]
 };
 
+export const onkoBhaiyaApp: AppData = {
+  id: 106,
+  name: "Onko Bhaiya",
+  developer: "Mahathir Ahmed Tusher",
+  icon: "https://i.postimg.cc/tg63FzJ7/Untitled-design-(12).png",
+  rating: 4.8,
+  downloads: "5K+",
+  verified: true,
+  category: "education",
+  shortDescription: "Your Personal Math Assistant for step-by-step solutions",
+  description: `**Onko Bhaiya** – Your Personal Math Assistant is a powerful Android app designed to help students solve math problems quickly and easily with clear, step-by-step explanations. Whether it’s algebra, calculus, or geometry, students can simply take a photo of their handwritten or printed question and receive detailed solutions that help them truly understand the concepts. Built with a smooth and responsive interface, adaptive design for all screen sizes, light and dark mode support, modern splash screen, intelligent caching, and smart offline handling, Onko Bhaiya delivers a fast and seamless learning experience. Perfect for school, college, HSC, SSC, and admission test preparation, it makes mastering mathematics simple, smart, and efficient.`,
+  version: "1.0.0",
+  size: "15 MB",
+  downloadUrl: "https://github.com/Mahatir-Ahmed-Tusher/OnkoBhaiya/releases/download/v1.0.0/OnkoBhaiya.apk",
+  features: [
+    "📸 Photo-based math problem solving",
+    "🔢 Step-by-step clear explanations",
+    "📚 Covers Algebra, Calculus, Geometry & more",
+    "🌙 Light and Dark mode support",
+    "💾 Intelligent caching & Smart offline handling",
+    "⚡ Smooth and responsive adaptive UI"
+  ],
+  reviews: [
+    {
+      id: 1,
+      userName: "Rahim Uddin – Dhaka",
+      rating: 5,
+      comment: "এই অ্যাপটা আমার গণিতের ভয় অনেক কমিয়ে দিয়েছে। ধাপে ধাপে বুঝিয়ে দেয়, তাই আসলেই শেখা যায়।",
+      date: "2025-02-15"
+    },
+    {
+      id: 2,
+      userName: "Tasnia Islam – Chattogram",
+      rating: 5,
+      comment: "HSC preparation এর জন্য খুব কাজে দিচ্ছে। ছবি তুলে দিলেই সমাধান পাওয়া যায় – দারুণ!",
+      date: "2025-02-16"
+    },
+    {
+      id: 3,
+      userName: "Sakib Hasan – Rajshahi",
+      rating: 5,
+      comment: "UI অনেক smooth আর fast। অন্য math app থেকে এটা অনেক better লেগেছে।",
+      date: "2025-02-17"
+    },
+    {
+      id: 4,
+      userName: "Nusrat Jahan – Sylhet",
+      rating: 5,
+      comment: "Algebra আর calculus বুঝতে অনেক help করছে। Step-by-step explanation টা খুব clear।",
+      date: "2025-02-18"
+    },
+    {
+      id: 5,
+      userName: "Mehedi Khan – Khulna",
+      rating: 5,
+      comment: "Internet না থাকলেও সুন্দরভাবে handle করে। Retry option থাকাটা ভালো লেগেছে।",
+      date: "2025-02-18"
+    },
+    {
+      id: 6,
+      userName: "Farzana Akter – Barishal",
+      rating: 5,
+      comment: "Admission preparation এর জন্য খুব useful। সত্যি বলতে Onko Bhaiya একটা লাইফসেভার!",
+      date: "2025-02-19"
+    }
+  ]
+};
+
 export const featuredApps: AppData[] = [
   {
     id: 1,
@@ -590,6 +658,7 @@ export const trendingApps: AppData[] = [
 ];
 
 export const newApps: AppData[] = [
+  onkoBhaiyaApp,
   dabarenaApp,
   boiwatchApp,
   {
@@ -692,6 +761,7 @@ export const getAllApps = (): AppData[] => {
     wordViaApp,
     boiwatchApp,
     dabarenaApp,
+    onkoBhaiyaApp,
   ];
 };
 
@@ -721,6 +791,7 @@ export const educationApps: AppData[] = [
   ...trendingApps.filter(app => app.category === "education"),
   khojApp,
   genZDictionaryApp,
+  onkoBhaiyaApp,
 ];
 
 // Games category apps
@@ -733,6 +804,7 @@ export const gamesApps: AppData[] = [
 // Featured apps including custom apps
 export const customFeaturedApps: AppData[] = [
   dabarenaApp,
+  onkoBhaiyaApp,
   boiwatchApp,
   gaanlyApp,
   khojApp,
